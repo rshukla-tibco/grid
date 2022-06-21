@@ -16,7 +16,7 @@ LABEL summary="Provides GridServer Engine base image"
 ARG JVM_MAX_HEAP="1024m"
 
 # Download the archive and extract it without writing the archive file to disk
-RUN wget $GS_ARCHIVE_URL | tar xz -C /opt
+RUN curl $GS_ARCHIVE_URL | tar xz -C /opt
 
 # Manager communications (Engine File Server port)
 EXPOSE 27159/tcp
