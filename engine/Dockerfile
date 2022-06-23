@@ -1,5 +1,5 @@
 # Use centos as the base layer or any GridServer supported OS platform.
-FROM redhat
+FROM ubuntu
 
 USER root
 
@@ -15,8 +15,8 @@ LABEL summary="Provides GridServer Engine base image"
 # Default is 1024m
 ARG JVM_MAX_HEAP="1024m"
 
-RUN apt update
-RUN  apt install curl
+
+RUN  apt-get install curl
 
 # Download the archive and extract it without writing the archive file to disk
 RUN curl $GS_ARCHIVE_URL | tar xz -C /opt
