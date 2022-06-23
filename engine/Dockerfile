@@ -29,6 +29,8 @@ EXPOSE 27159/tcp
 
 WORKDIR /opt/datasynapse/engine
 
+RUN ls
+
 RUN chmod -R a+w /opt/datasynapse/engine
 
 CMD cd /opt/datasynapse/engine && ./configure.sh -s $DIRECTOR_URL && ./engine.sh start $ENGINE_CONFIG && tail -F /etc/hosts
