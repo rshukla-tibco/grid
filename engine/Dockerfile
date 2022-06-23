@@ -17,6 +17,7 @@ ARG JVM_MAX_HEAP="1024m"
 
 
 #RUN  apt-get install curl
+RUN apt-get install -y wget
 
 # Download the archive and extract it without writing the archive file to disk
 RUN wget  $GS_ARCHIVE_URL | tar xz -C /opt
