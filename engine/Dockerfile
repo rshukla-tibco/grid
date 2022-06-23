@@ -15,8 +15,8 @@ LABEL summary="Provides GridServer Engine base image"
 # Default is 1024m
 ARG JVM_MAX_HEAP="1024m"
 
-EXPOSE 9080/tcp
-EXPOSE 9000/tcp
+EXPOSE 8080/tcp
+EXPOSE 8000/tcp
 
 # Download the archive and extract it without writing the archive file to disk
 RUN curl $GS_ARCHIVE_URL | tar xz -C /opt
