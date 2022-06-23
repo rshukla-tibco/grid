@@ -1,5 +1,5 @@
 # Use centos as the base layer or any GridServer supported OS platform.
-FROM centos
+FROM ubuntu
 
 USER root
 
