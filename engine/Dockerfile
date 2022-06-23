@@ -22,15 +22,13 @@ RUN curl $GS_ARCHIVE_URL | tar xz -C /opt
 
 EXPOSE 27159/tcp
 
-#RUN yum -y install bind-utils file hostname iproute iputils net-tools nmap traceroute && yum clean all -y
+RUN yum -y install bind-utils file hostname iproute iputils net-tools nmap traceroute && yum clean all -y
 
 WORKDIR /opt/datasynapse/engine
 
-RUN ls
 
 RUN chmod -R a+w /opt/datasynapse/engine
 
 
 CMD cd /opt/datasynapse/engine && ./configure.sh -s $DIRECTOR_URL && ./engine.sh start $ENGINE_CONFIG && tail -F /etc/hosts
 
-RUN ls
