@@ -15,7 +15,7 @@ LABEL summary="Provides GridServer Engine base image"
 # Default is 1024m
 ARG JVM_MAX_HEAP="1024m"
 
-RUN yum install curl
+RUN apt install curl
 
 # Download the archive and extract it without writing the archive file to disk
 RUN curl $GS_ARCHIVE_URL | tar xz -C /opt
