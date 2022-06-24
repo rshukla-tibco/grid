@@ -1,5 +1,5 @@
 # Use centos as the base layer or any GridServer supported OS platform.
-FROM Redhat
+FROM redhat/ubi9-init
 
 USER root
 
