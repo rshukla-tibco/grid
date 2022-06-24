@@ -33,4 +33,7 @@ RUN ls
 
 RUN chmod -R a+w /opt/datasynapse/engine
 
+RUN echo $DIRECTOR_URL
+RUN echo $ENGINE_CONFIG
+
 CMD cd /opt/datasynapse/engine && ./configure.sh -s $DIRECTOR_URL && ./engine.sh start $ENGINE_CONFIG && tail -F /etc/hosts
