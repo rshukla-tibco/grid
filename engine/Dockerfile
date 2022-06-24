@@ -33,7 +33,6 @@ RUN ls
 
 RUN chmod -R a+w /opt/datasynapse/engine
 
-CMD  echo $DIRECTOR_URL
-CMD  echo $ENGINE_CONFIG
 
-CMD cd /opt/datasynapse/engine && ./configure.sh -s $DIRECTOR_URL && ./engine.sh start $ENGINE_CONFIG && tail -F /etc/hosts
+
+CMD cd /opt/datasynapse/engine && ./configure.sh -s 192.168.99.1:8080 && ./engine.sh start default && tail -F /etc/hosts
