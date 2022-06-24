@@ -24,7 +24,9 @@ RUN curl  $GS_ARCHIVE_URL | tar xz -C /opt
 # Manager communications (Engine File Server port)
 EXPOSE 27159/tcp
 
-RUN yum -y install bind-utils file hostname iproute iputils net-tools nmap traceroute && yum clean all -y
+#RUN yum -y install bind-utils file hostname iproute iputils net-tools nmap traceroute && yum clean all -y
+RUN yum -y install bind-utils
+
 
 WORKDIR /opt/datasynapse/engine
 
